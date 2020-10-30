@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 .container {
   display: flex;
   justify-content: center;
@@ -10,14 +12,19 @@
   border: 1px solid rgba(0, 17, 255, 0.432);
   border-radius: 19px;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+  /* font-family: "Permanent Marker", cursive; */
+  padding: 30px;
   text-align: center;
   width: 700px;
 }
 
 .question {
-  text-align: center;
+  text-align: left;
+  font-weight: 700;
+  /* border: 2px solid red; */
 }
 
 .answers {
-  text-align: center;
+  padding-top: 20px;
+  text-align: left;
 }
