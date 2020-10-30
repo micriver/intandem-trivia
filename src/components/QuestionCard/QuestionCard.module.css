@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  /* border: 3px solid green; */
+}
+
+.card {
+  border: 1px solid rgba(0, 17, 255, 0.432);
+  border-radius: 19px;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 700px;
+}
+
+.question {
+  text-align: center;
+}
+
+.answers {
+  text-align: center;
+}
