@@ -26,3 +26,4 @@ I'd like to keep the design as minimal and clean as possible. Each question will
 2. [Parse JSON data from a local file into a React app.](https://stackoverflow.com/questions/37649695/how-can-i-parse-through-local-json-file-in-react-js)
 3. [Adding fonts in React.Js](https://stackoverflow.com/questions/40769551/how-to-use-google-fonts-in-react-js)
 4. [Using CSS Modules in React.Js](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+5. [Pass a parameter through an onClick function](https://upmostly.com/tutorials/pass-a-parameter-through-onclick-in-react)

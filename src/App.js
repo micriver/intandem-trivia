@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import QuestionCard from "./components/QuestionCard/QuestionCard";
 import trivia from "./assets/JSON/Apprentice_TandemFor400_Data.json";
 
@@ -6,31 +7,50 @@ import styles from "./App.module.css";
 
 function App() {
   // modify rounds to show different questions
-  const [round, setRound] = useState(1);
+  // const [round, setRound] = useState(1);
   // you have to add logic for another question without repeats
   // keep track of questions between rounds and display all of them between the two rounds
+
+  // feed all of trivia JSON data at top level since this is array of objects
+  function randomNoRepeats(array) {
+    var copy = array.slice(0); // create a copy of the incoming array from the first index
+    return function () {
+      if (copy.length < 1) {
+        // length check
+        copy = array.slice(0);
+      }
+      var index = Math.floor(Math.random() * copy.length); // get a random item in the array within it's length
+      var item = copy[index]; // assign object in the array to variable
+      copy.splice(index, 1); // remove the item found at the index in the copied array
+      return item; // return that item
+    };
+  }
+
+  let chooser = randomNoRepeats(trivia);
+
   const randomNum = Math.floor(Math.random() * trivia.length);
 
-  console.log(randomNum);
-
-  // const randomQuestion = Object.values(trivia[randomNum])[0];
-
-  // console.log(randomQuestion);
-
-  const answerHandler = () => {
-    console.log("you're clicking the button!");
+  const answerHandler = (answer) => {
+    const incomingAnswer = Object.values(answer)[0];
+    const correctAnswer = Object.values(trivia[randomNum])[2];
+    if (incomingAnswer === correctAnswer) {
+      console.log("You've selected the correct answer!");
+    } else {
+      console.log("not right!");
+    }
   };
 
-  const answerHandler = () => {
-    console.log("you're clicking the button!");
-  };
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Trivia!</h1>
       <QuestionCard
-        correct={Object.values(trivia[randomNum])[2]}
-        incorrect={Object.values(trivia[randomNum])[1]}
-        question={Object.values(trivia[randomNum])[0]}
+        answerHandler={randomNoRepeats(trivia)}
+        // answerHandler={answerHandler}
+        questionObj={Object.values(chooser())}
+        // correct={Object.values(chooser())[2]}
+        // // correct={Object.values(trivia[randomNum])[2]}
+        // incorrect={Object.values(chooser())[1]}
+        // question={Object.values(chooser())[0]}
       />
     </div>
   );
