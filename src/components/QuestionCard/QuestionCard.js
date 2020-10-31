@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./QuestionCard.module.css";
 
-import { shuffle } from "./Utils";
+import { shuffle } from "../../Utils";
 
-export default function QuestionCard({ question }) {
+export default function QuestionCard({ question, increaseScore }) {
+  const [qIndex, setQIndex] = useState(0);
+
+  const nextQuestion = () => {
+    setQIndex(qIndex + 1);
+  };
+
   let newArray = [];
-  newArray = question[0].incorrect.slice();
+  newArray = question[qIndex].incorrect.slice();
   // inserting correct answer into incorrect answer array
-  newArray.push(question[0].correct);
+  newArray.push(question[qIndex].correct);
 
   const answerHandler = (answer) => {
     const incomingAnswer = Object.values(answer)[0];
-    const correctAnswer = Object.values(question[0])[2];
+    const correctAnswer = Object.values(question[qIndex])[2];
+    console.log(correctAnswer);
+    console.log(incomingAnswer);
     if (incomingAnswer === correctAnswer) {
       console.log("You've selected the correct answer!");
+      increaseScore();
+      nextQuestion();
     } else {
       console.log("not right!");
+      nextQuestion();
     }
   };
 
@@ -32,7 +43,7 @@ export default function QuestionCard({ question }) {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles.question}>{question[0].question}</div>
+        <div className={styles.question}>{question[qIndex].question}</div>
         <div className={styles.answers}>
           <div>{listItems}</div>
         </div>
