@@ -28,8 +28,8 @@ function randomNoRepeats(array) {
     var index = Math.floor(Math.random() * copy.length); // get a random item in the array within it's length
     var item = copy[index]; // assign item in the array to variable
     copy.splice(index, 1); // remove the item found at the index in the copied array
-    console.log(item.question);
-    console.log(item.correct);
+    // console.log(item.question);
+    // console.log(item.correct);
     return item; // return that item
   };
 }
@@ -41,8 +41,6 @@ var chooser = randomNoRepeats(trivia);
 // console.log(Object.values(chooser())[0]); // => "Bar"
 // console.log(Object.values(chooser())[0]); // => "Bar"
 // console.log(Object.values(chooser())[0]); // => "Bar"
-// console.log(chooser()); // => "Foo"
+console.log(chooser()); // => "Foo"
 // console.log(chooser()); // => "Gah"
 // console.log(chooser()); // => "Foo"-- only repeats once all items are exhausted.
-
-chooser();
