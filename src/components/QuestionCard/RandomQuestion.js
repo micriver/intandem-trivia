@@ -34,6 +34,7 @@ function randomNoRepeats(array) {
   };
 }
 
+// chooser has to be relabeled as questionObj since it returns the question with answers as an object
 var chooser = randomNoRepeats(trivia);
 // var chooser = randomNoRepeats(["Foo", "Bar", "Gah"]);
 // console.log(Object.values(chooser())[0]); // => "Bar"

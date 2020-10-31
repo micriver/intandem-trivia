@@ -9,27 +9,29 @@ export default function QuestionCard({
   answerHandler,
 }) {
   // mapping incorrect object property to a JSX variable
-  // const listItems = incorrect.map((incAnswers) => (
-  //   <li onClick={() => answerHandler({ incAnswers })} className={styles.items}>
-  //     {incAnswers}
-  //   </li>
-  // ));
-  console.log(questionObj);
+  const listItems = questionObj[1].map((incAnswers) => (
+    <li onClick={() => answerHandler({ incAnswers })} className={styles.items}>
+      {incAnswers}
+    </li>
+  ));
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div onClick={answerHandler}>{questionObj[0]}</div>
-        {/* <div className={styles.question}>{question}</div>
+        <div className={styles.question} onClick={answerHandler}>
+          {questionObj[0]}
+        </div>
         <div className={styles.answers}>
           <div>{listItems}</div>
           <li
-            onClick={() => answerHandler({ correct })}
+            // onClick={() => answerHandler(questionObj[2])}
+            // testing question changing
+            onClick={answerHandler()}
             className={styles.items}
           >
-            {correct}
+            {questionObj[2]}
           </li>
-        </div> */}
+        </div>
       </div>
     </div>
   );

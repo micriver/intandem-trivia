@@ -1,5 +1,5 @@
-// import React, { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
+// import React from "react";
 import QuestionCard from "./components/QuestionCard/QuestionCard";
 import trivia from "./assets/JSON/Apprentice_TandemFor400_Data.json";
 
@@ -8,8 +8,7 @@ import styles from "./App.module.css";
 function App() {
   // modify rounds to show different questions
   // const [round, setRound] = useState(1);
-  // you have to add logic for another question without repeats
-  // keep track of questions between rounds and display all of them between the two rounds
+  const [questionObj, setQuestion] = useState();
 
   // feed all of trivia JSON data at top level since this is array of objects
   function randomNoRepeats(array) {
@@ -21,12 +20,18 @@ function App() {
       }
       var index = Math.floor(Math.random() * copy.length); // get a random item in the array within it's length
       var item = copy[index]; // assign object in the array to variable
+      // questionObj = copy[index]; // assign object in the array to variable
       copy.splice(index, 1); // remove the item found at the index in the copied array
       return item; // return that item
     };
   }
 
-  let chooser = randomNoRepeats(trivia);
+  // question changes everytime we call setQuestion
+  // let setQuestion = randomNoRepeats(trivia);
+  const chooseQuestion = () => {
+    setQuestion(randomNoRepeats(trivia));
+  };
+  console.log(chooseQuestion());
 
   const randomNum = Math.floor(Math.random() * trivia.length);
 
@@ -43,15 +48,17 @@ function App() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Trivia!</h1>
-      <QuestionCard
-        answerHandler={randomNoRepeats(trivia)}
+      {/* <QuestionCard
+        answerHandler={() => setQuestion()}
         // answerHandler={answerHandler}
-        questionObj={Object.values(chooser())}
+        questionObj={questionObj}
+        // questionObj={Object.values(setQuestion())}
         // correct={Object.values(chooser())[2]}
         // // correct={Object.values(trivia[randomNum])[2]}
         // incorrect={Object.values(chooser())[1]}
         // question={Object.values(chooser())[0]}
-      />
+      /> */}
+      {questionObj}
     </div>
   );
 }
