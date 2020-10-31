@@ -16,6 +16,8 @@ Each object has the question itself, the incorrect answers in an array and the c
 
 I'm not a professional designer. But I definitely found myself wanting a certain simple look to the application. Google and W3schools came in clutch a lot of the time when it came to styling.
 
+I was calling the shuffle function multiple times without realizing it. Spent a lot of time trying to find this bug and read documentation about the wrong things. Sometimes the best debugger is a break.
+
 ### Design Thoughts
 
 I'd like to keep the design as minimal and clean as possible. Each question will be displayed on a card. I want to add transitional animations whenever an action occurs, although that will depend on how much time I have left to finish the challenge.

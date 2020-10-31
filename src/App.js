@@ -4,56 +4,25 @@ import QuestionCard from "./components/QuestionCard/QuestionCard";
 import trivia from "./assets/JSON/Apprentice_TandemFor400_Data.json";
 
 import styles from "./App.module.css";
+import ScoreCard from "./components/Score/ScoreCard";
 
 function App() {
   // modify rounds to show different questions
   // const [round, setRound] = useState(1);
+  const [score, setScore] = useState(0);
 
-  function shuffle(array) {
-    let ctr = array.length;
-    let temp;
-    let index;
-
-    // While there are elements in the array
-    while (ctr > 0) {
-      // Pick a random index
-      index = Math.floor(Math.random() * ctr);
-      // Decrease ctr by 1
-      ctr--;
-      // And swap the last element with it
-      temp = array[ctr];
-      array[ctr] = array[index];
-      array[index] = temp;
-    }
-    return array;
-  }
-  shuffle(trivia);
-  // console.log(shuffle(trivia));
-
-  // const randomNum = Math.floor(Math.random() * trivia.length);
-
-  // const answerHandler = (answer) => {
-  //   const incomingAnswer = Object.values(answer)[0];
-  //   console.log(incomingAnswer);
-  //   const correctAnswer = Object.values(trivia[0])[2];
-  //   console.log(correctAnswer);
-  //   // if (incomingAnswer === correctAnswer) {
-  //   //   console.log("You've selected the correct answer!");
-  //   // } else {
-  //   //   console.log("not right!");
-  //   // }
-  // };
+  const increaseScore = () => {
+    setScore(score + 1);
+  };
 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Trivia!</h1>
       <QuestionCard
-        // answerHandler={answerHandler}
-        // correct={Object.values(trivia[randomNum])[2]}
-        // incorrect={Object.values(chooser())[1]}
-        // question={Object.values(chooser())[0]}
+        increaseScore={increaseScore}
         question={Object.values(trivia)}
       />
+      <ScoreCard classname={styles.scoreCard} score={score} />
     </div>
   );
 }

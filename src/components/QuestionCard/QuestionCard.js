@@ -5,9 +5,16 @@ import { shuffle } from "../../Utils";
 
 export default function QuestionCard({ question, increaseScore }) {
   const [qIndex, setQIndex] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
 
   const nextQuestion = () => {
     setQIndex(qIndex + 1);
+  };
+
+  const startGame = () => {
+    console.log("This is before the game has started", gameStarted);
+    setGameStarted(true);
+    console.log(gameStarted);
   };
 
   let newArray = [];
@@ -30,7 +37,12 @@ export default function QuestionCard({ question, increaseScore }) {
     }
   };
 
-  const listItems = shuffle(newArray).map((answers, index) => (
+  if (!gameStarted) {
+    shuffle(newArray);
+    startGame();
+  }
+
+  const listItems = newArray.map((answers, index) => (
     <li
       key={index}
       onClick={() => answerHandler({ answers })}
