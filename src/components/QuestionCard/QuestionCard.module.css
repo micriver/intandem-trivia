@@ -5,11 +5,10 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  /* border: 3px solid green; */
 }
 
 .card {
-  border: 1px solid rgba(0, 17, 255, 0.432);
+  border: 3px solid rgba(0, 17, 255, 0.432);
   border-radius: 19px;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
   /* font-family: "Permanent Marker", cursive; */
@@ -21,7 +20,6 @@
 .question {
   text-align: left;
   font-weight: 700;
-  /* border: 2px solid red; */
 }
 
 .answers {
@@ -32,3 +30,95 @@
 .items {
   padding: 9px;
 }
+
+/* modal stuff  */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  /* darken the outside of the modal */
+  /* background-color: #000;
+  opacity: 0.1; */
+}
+
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+/* changes the actual box position and size */
+.modal {
+  justify-content: center;
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 220px auto;
+  border-radius: 19px;
+  max-width: 450px;
+  height: 400px;
+  padding: 3rem;
+  box-shadow: 1px 49px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(0, 255, 34, 0.719);
+}
+
+.modal2 {
+  justify-content: center;
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 220px auto;
+  border-radius: 19px;
+  max-width: 450px;
+  height: 400px;
+  padding: 3rem;
+  box-shadow: 1px 49px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 0, 34, 0.719);
+}
+
+.modalText {
+  font-size: 60px;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.emoji {
+  font-size: 165px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  /* margin-bottom: 1px; */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.modalCloseButton {
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: 0.5;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* .buttonDefault {
+  background: #247ba0;
+  color: #fff;
+} */
