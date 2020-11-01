@@ -6,7 +6,24 @@ import trivia from "./assets/JSON/Apprentice_TandemFor400_Data.json";
 import styles from "./App.module.css";
 import ScoreCard from "./components/Score/ScoreCard";
 
+import { shuffle } from "./Utils";
+
 function App() {
+  const [stateTrivia, setTrivia] = useState(trivia);
+  const [gameStarted, setGameStarted] = useState(false);
+
+  const startGame = () => {
+    setGameStarted(true);
+    console.log(gameStarted);
+    console.log("The game has started", gameStarted);
+  };
+
+  const shuffleQuestions = () => {
+    shuffle(stateTrivia);
+    setTrivia(stateTrivia);
+    console.log(stateTrivia);
+  };
+
   // modify rounds to show different questions
   // const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
@@ -15,12 +32,20 @@ function App() {
     setScore(score + 1);
   };
 
+  if (!gameStarted) {
+    console.log("we're about to shuffle");
+    shuffleQuestions();
+    startGame();
+  } else {
+    console.log("This happens when gameStarted is: ", gameStarted);
+  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Trivia!</h1>
       <QuestionCard
         increaseScore={increaseScore}
-        question={Object.values(trivia)}
+        question={Object.values(stateTrivia)}
       />
       <ScoreCard classname={styles.scoreCard} score={score} />
     </div>

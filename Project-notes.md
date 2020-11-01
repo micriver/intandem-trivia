@@ -18,6 +18,8 @@ I'm not a professional designer. But I definitely found myself wanting a certain
 
 I was calling the shuffle function multiple times without realizing it. Spent a lot of time trying to find this bug and read documentation about the wrong things. Sometimes the best debugger is a break.
 
+State being changed in the child component was changed everytime I changed props inside the child from the parent. If you want state to stay the same and have logic doing work in your child, you must have that state inside your parent.
+
 ### Design Thoughts
 
 I'd like to keep the design as minimal and clean as possible. Each question will be displayed on a card. I want to add transitional animations whenever an action occurs, although that will depend on how much time I have left to finish the challenge.
@@ -30,3 +32,8 @@ I'd like to keep the design as minimal and clean as possible. Each question will
 4. [Using CSS Modules in React.Js](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 5. [Pass a parameter through an onClick function](https://upmostly.com/tutorials/pass-a-parameter-through-onclick-in-react)
 6. [Copy Array into a new Array](https://stackoverflow.com/questions/7486085/copy-array-by-value)
+7. [Export functions for use across components](https://stackoverflow.com/questions/32888728/correct-way-to-share-functions-between-components-in-react/32889002)
+8. [Randomly arrange or shuffle an array](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-17.php)
+9. [Iterating over JSON data in React](https://kirstyburgoine.wordpress.com/2018/01/21/iterating-through-json-data-in-react/)
+10. [Object values, keys, entries explained](https://javascript.info/keys-values-entries)
+11. [Export module syntax for Jest](https://stackoverflow.com/questions/44302573/module-exports-multiple-functions-in-jest-testing)
