@@ -52,6 +52,8 @@ We would also like to see a README which includes any information about how to r
 
 I have been learning React on and off since the beginning of summer 2020. I've been stuck in a bit of tutorial purgatory but while coding this original project, I was exposed to more of React's inner workings and rules. I learned more about the parent-child relationship, re-rendering the DOM, utilizing React hooks and state interaction amongst components. I ran into issues related to the aforementioned topics and buried myself in documentation and stack overflow to fix them. In the end, I'm much more confident in my React abilities after this project.
 
+I made an attempt to work with Jest but due to timing, I felt I could miss the deadline or deliver an incomplete project. By the time I wanted to incorporate testing, I'd already completed a lot of the logic and felt like I was digging to find something in the app to test for the sake of testing. I choose to move forward, however, after seeing the benefits, I will definitely incorporate TDD into future projects.
+
 I'm not a professional designer but I definitely wanted a simple, clean look for the application. Google and W3schools came in clutch a lot of the time when it came to styling.
 
 I was using a function to shuffle the JSON array of objects in order to randomize the questions for the player. At some point, I realized I was calling the function multiple times without realizing it. I spent a lot of time trying to find this bug. At some point I found the function in two different places. Sometimes the best debugger is a **break**.
