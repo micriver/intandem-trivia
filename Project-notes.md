@@ -20,6 +20,8 @@ I was calling the shuffle function multiple times without realizing it. Spent a 
 
 State being changed in the child component was changed everytime I changed props inside the child from the parent. If you want state to stay the same and have logic doing work in your child, you must have that state inside your parent.
 
+Debugging the behavior of the application was difficult at first until I remembered there are [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en) available. I was able to find bugs much quicker after I remembered this extension!
+
 ### Design Thoughts
 
 I'd like to keep the design as minimal and clean as possible. Each question will be displayed on a card. I want to add transitional animations whenever an action occurs, although that will depend on how much time I have left to finish the challenge.
@@ -38,3 +40,4 @@ I'd like to keep the design as minimal and clean as possible. Each question will
 10. [Iterating over JSON data in React](https://kirstyburgoine.wordpress.com/2018/01/21/iterating-through-json-data-in-react/)
 11. [Object values, keys, entries explained](https://javascript.info/keys-values-entries)
 12. [Export module syntax for Jest](https://stackoverflow.com/questions/44302573/module-exports-multiple-functions-in-jest-testing)
+13. [If else statements for JSX](https://shripadk.github.io/react/tips/if-else-in-JSX.html#:~:text=if%2Delse%20statements%20don't,function%20calls%20and%20object%20construction.)

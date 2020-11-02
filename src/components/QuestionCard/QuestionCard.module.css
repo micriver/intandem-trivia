@@ -4,31 +4,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 250px;
 }
 
 .card {
   border: 3px solid rgba(0, 17, 255, 0.432);
   border-radius: 19px;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
-  /* font-family: "Permanent Marker", cursive; */
   padding: 30px;
   text-align: center;
   width: 700px;
 }
 
 .question {
-  text-align: left;
-  font-weight: 700;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
 }
 
 .answers {
   padding-top: 20px;
-  text-align: left;
 }
 
 .items {
+  color: rgba(255, 255, 255, 0.9);
   padding: 9px;
+  margin: 15px;
+  background-color: rgba(65, 105, 225, 0.37);
+  list-style-type: none;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 /* modal stuff  */
@@ -71,6 +77,38 @@
   border: 3px solid rgba(0, 255, 34, 0.719);
 }
 
+.modalEndRound1 {
+  justify-content: center;
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 220px auto;
+  border-radius: 19px;
+  max-width: 450px;
+  height: 400px;
+  padding: 3rem;
+  padding-top: 0.8rem;
+  padding-bottom: 5rem;
+  box-shadow: 1px 49px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(0, 255, 34, 0.719);
+}
+
+.modalEndRound1Incorrect {
+  justify-content: center;
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 220px auto;
+  border-radius: 19px;
+  max-width: 450px;
+  height: 400px;
+  padding: 3rem;
+  padding-top: 0.8rem;
+  padding-bottom: 5rem;
+  box-shadow: 1px 49px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 0, 34, 0.719);
+}
+
 .modal2 {
   justify-content: center;
   z-index: 100;
@@ -93,12 +131,37 @@
   margin-top: 15px;
 }
 
+.modalTextEndRound1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 5px;
+}
+
 .cAnswer {
   font-size: 25px;
   display: flex;
   justify-content: center;
   margin: 0px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.cAnswerEndRound1 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.cAnswerEndRound1 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  margin-bottom: 2px;
   text-align: center;
 }
 
@@ -112,6 +175,13 @@
 }
 
 .emoji {
+  font-size: 155px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.emojiIncRnd1 {
   font-size: 155px;
   display: flex;
   justify-content: center;

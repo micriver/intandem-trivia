@@ -5,7 +5,12 @@ import { shuffle } from "../../Utils";
 import Modal from "../Modal/Modal";
 import useModal from "../Modal/useModal";
 
-export default function QuestionCard({ question, increaseScore }) {
+export default function QuestionCard({
+  question,
+  increaseScore,
+  score,
+  resetGame,
+}) {
   const [qIndex, setQIndex] = useState(0);
 
   // toggle modal
@@ -67,6 +72,9 @@ export default function QuestionCard({ question, increaseScore }) {
           nextQuestion={nextQuestion}
           increaseScore={increaseScore}
           questionNum={qIndex + 1}
+          score={score}
+          resetGame={resetGame}
+          resetQ={setQIndex}
         />
         <div className={styles.card}>
           <div className={styles.question}>{question[qIndex].question}</div>
