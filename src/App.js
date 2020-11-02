@@ -73,9 +73,11 @@ Acceptance Criteria
 • • • • • •
 [✓] A user can view questions.
 [✓] Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
-[ ] A user can select only 1 answer out of the 4 possible answers.
-[ ] The correct answer must be revealed after a user has submitted their answer
+[✓] A user can select only 1 answer out of the 4 possible answers.
+[✓] The correct answer must be revealed after a user has submitted their answer
 [ ] A user can see the score they received at the end of the round
+[ ] Your submission must include instructions for how to run your code. You must also list any system dependencies (e.g. Ruby 2.3, Erlang runtime, JDK8, etc). Your README is a great place to put this information
+[ ] Your README must include any information about how to run the code, any known issues or complexity we should look out for, and any additional features you would like to have added to make your trivia app even more awesome
 
 ctrl+k, shift+o,k for checkmark
 

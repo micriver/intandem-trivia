@@ -93,12 +93,29 @@
   margin-top: 15px;
 }
 
-.emoji {
-  font-size: 165px;
+.cAnswer {
+  font-size: 25px;
   display: flex;
   justify-content: center;
   margin: 0px;
-  /* margin-bottom: 1px; */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cAnswerRound1 {
+  margin-bottom: 0px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 155px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
 }
 
 .modalHeader {
@@ -117,8 +134,3 @@
   border: none;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* .buttonDefault {
-  background: #247ba0;
-  color: #fff;
-} */
