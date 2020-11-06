@@ -24,6 +24,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+<br>
+<p align="center">
+  <div align="center">
+   <img style="border-radius: 20px; box-shadow: 1px 8px 14px rgba(0, 0, 0, 0.4);" src="./src/assets/screenshots/tandem-trivia.gif" width="525px"</img><br><br>
+  </div>
+</p>
+
 # Project Goals
 
 From the PDF:
